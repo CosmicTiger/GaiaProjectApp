@@ -8,8 +8,8 @@
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="show_sql">true</property>
-    <property name="connection.username">root</property>
-    <property name="connection.password">cancer160799</property>
+    <property name="connection.username">gaia_root</property>
+    <property name="connection.password">Gaia_2019</property>
     <mapping class="GaiaProjectAppService.models.entities.Animalia"/>
     <mapping class="GaiaProjectAppService.models.entities.AnimaliaZone"/>
     <mapping class="GaiaProjectAppService.models.entities.Association"/>
