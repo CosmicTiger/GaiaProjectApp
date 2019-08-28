@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="GaiaProjectAppService.models.entities.User" table="User">
+        <id name="idUser">
+            <column name="idUser" sql-type="int(11)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="idStaff">
+            <column name="idStaff" sql-type="int(11)"/>
+        </property>
+        <property name="profilePhoto">
+            <column name="profilePhoto" sql-type="varchar(100)" length="100" not-null="true"/>
+        </property>
+        <property name="username">
+            <column name="username" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(30)" length="30"/>
+        </property>
+        <property name="securityQuestion">
+            <column name="securityQuestion" sql-type="varchar(100)" length="100"/>
+        </property>
+        <property name="securityAnswer">
+            <column name="securityAnswer" sql-type="varchar(100)" length="100"/>
+        </property>
+        <many-to-one name="staffByIdStaff" class="GaiaProjectAppService.models.entities.Staff" insert="false" update="false">
+            <column name="idStaff"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

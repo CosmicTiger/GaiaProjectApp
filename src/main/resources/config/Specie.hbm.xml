@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="GaiaProjectAppService.models.entities.Specie" table="Specie" schema="GaiaDatabase">
+        <id name="idSpecie">
+            <column name="idSpecie" sql-type="int(11)"/>
+        </id>
+        <property name="specieCode">
+            <column name="specieCode" sql-type="varchar(12)" length="12"/>
+        </property>
+        <property name="commonName">
+            <column name="commonName" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="cientificName">
+            <column name="cientificName" sql-type="varchar(60)" length="60"/>
+        </property>
+        <property name="status">
+            <column name="status" sql-type="varchar(50)" length="50"/>
+        </property>
+        <set name="animaliasByIdSpecie" inverse="true">
+            <key>
+                <column name="idSpecie"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.Animalia"/>
+        </set>
+        <set name="plantaesByIdSpecie" inverse="true">
+            <key>
+                <column name="idSpecie"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.Plantae"/>
+        </set>
+        <set name="transferencesByIdSpecie" inverse="true">
+            <key>
+                <column name="idSpecie"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.Transferences"/>
+        </set>
+    </class>
+</hibernate-mapping>

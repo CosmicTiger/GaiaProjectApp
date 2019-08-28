@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="GaiaProjectAppService.models.entities.Program" table="Program" schema="GaiaDatabase">
+        <id name="idProgram">
+            <column name="idProgram" sql-type="int(11)"/>
+        </id>
+        <property name="programCode">
+            <column name="programCode" sql-type="int(11)"/>
+        </property>
+        <property name="programName">
+            <column name="programName" sql-type="varchar(70)" length="70"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="varchar(90)" length="90"/>
+        </property>
+        <property name="programType">
+            <column name="programType" sql-type="varchar(90)" length="90"/>
+        </property>
+        <property name="initialDate">
+            <column name="initialDate" sql-type="date" not-null="true"/>
+        </property>
+        <property name="finalDate">
+            <column name="finalDate" sql-type="date" not-null="true"/>
+        </property>
+        <property name="statusProgram">
+            <column name="statusProgram" sql-type="varchar(50)" length="50"/>
+        </property>
+        <set name="programDonationsByIdProgram" inverse="true">
+            <key>
+                <column name="idProgram"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.ProgramDonation"/>
+        </set>
+        <set name="transferencesByIdProgram" inverse="true">
+            <key>
+                <column name="idProgram"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.Transferences"/>
+        </set>
+    </class>
+</hibernate-mapping>

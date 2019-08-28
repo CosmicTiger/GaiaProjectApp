@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="GaiaProjectAppService.models.entities.PaymentDetail" table="PaymentDetail" schema="GaiaDatabase">
+        <id name="idPaymentDtl">
+            <column name="idPaymentDtl" sql-type="int(11)"/>
+        </id>
+        <property name="idStaff">
+            <column name="idStaff" sql-type="int(11)"/>
+        </property>
+        <property name="paymentDate">
+            <column name="paymentDate" sql-type="date"/>
+        </property>
+        <property name="grossAmount">
+            <column name="grossAmount" sql-type="double" precision="-1"/>
+        </property>
+        <property name="netAmount">
+            <column name="netAmount" sql-type="double" precision="-1"/>
+        </property>
+        <many-to-one name="staffByIdStaff" class="GaiaProjectAppService.models.entities.Staff" insert="false" update="false">
+            <column name="idStaff"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

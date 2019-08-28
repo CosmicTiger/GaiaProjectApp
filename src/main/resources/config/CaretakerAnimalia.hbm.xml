@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="GaiaProjectAppService.models.entities.CaretakerAnimalia" table="Caretaker_Animalia" schema="GaiaDatabase">
+        <id name="idCaretakerAnimalia">
+            <column name="idCaretakerAnimalia" sql-type="int(11)"/>
+        </id>
+        <property name="idAnimalia">
+            <column name="idAnimalia" sql-type="int(11)"/>
+        </property>
+        <property name="idCaretaker">
+            <column name="idCaretaker" sql-type="int(11)"/>
+        </property>
+        <property name="initialDate">
+            <column name="initialDate" sql-type="date"/>
+        </property>
+        <property name="finalDate">
+            <column name="finalDate" sql-type="date"/>
+        </property>
+        <many-to-one name="animaliaByIdAnimalia" class="GaiaProjectAppService.models.entities.Animalia" insert="false" update="false">
+            <column name="idAnimalia"/>
+        </many-to-one>
+        <many-to-one name="caretakerByIdCaretaker" class="GaiaProjectAppService.models.entities.Caretaker" insert="false" update="false">
+            <column name="idCaretaker"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

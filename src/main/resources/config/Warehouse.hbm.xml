@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="GaiaProjectAppService.models.entities.Warehouse" table="Warehouse" schema="GaiaDatabase">
+        <id name="idWarehouse">
+            <column name="idWarehouse" sql-type="int(11)"/>
+        </id>
+        <property name="idManagement">
+            <column name="idManagement" sql-type="int(11)"/>
+        </property>
+        <property name="idZone">
+            <column name="idZone" sql-type="int(11)"/>
+        </property>
+        <property name="capacity">
+            <column name="capacity" sql-type="int(11)"/>
+        </property>
+        <property name="size">
+            <column name="size" sql-type="double" precision="-1"/>
+        </property>
+        <many-to-one name="managementByIdManagement" class="GaiaProjectAppService.models.entities.Management" insert="false" update="false">
+            <column name="idManagement"/>
+        </many-to-one>
+        <many-to-one name="zoneByIdZone" class="GaiaProjectAppService.models.entities.Zone" insert="false" update="false">
+            <column name="idZone"/>
+        </many-to-one>
+        <set name="merchandisingsByIdWarehouse" inverse="true">
+            <key>
+                <column name="idWarehouse"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.Merchandising"/>
+        </set>
+        <set name="salesByIdWarehouse" inverse="true">
+            <key>
+                <column name="idWarehouse"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.Sale"/>
+        </set>
+        <set name="suppliesByIdWarehouse" inverse="true">
+            <key>
+                <column name="idWarehouse"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.Supply"/>
+        </set>
+    </class>
+</hibernate-mapping>

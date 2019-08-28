@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="GaiaProjectAppService.models.entities.TransferencesPlantae" table="Transferences_Plantae"
+           schema="GaiaDatabase">
+        <id name="idTransferencePlantae">
+            <column name="idTransferencePlantae" sql-type="int(11)"/>
+        </id>
+        <property name="idPlantae">
+            <column name="idPlantae" sql-type="int(11)"/>
+        </property>
+        <property name="idTransferences">
+            <column name="idTransferences" sql-type="int(11)"/>
+        </property>
+        <many-to-one name="plantaeByIdPlantae" class="GaiaProjectAppService.models.entities.Plantae" insert="false" update="false">
+            <column name="idPlantae"/>
+        </many-to-one>
+        <many-to-one name="transferencesByIdTransferences" class="GaiaProjectAppService.models.entities.Transferences" insert="false" update="false">
+            <column name="idTransferences"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

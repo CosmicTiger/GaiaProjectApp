@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="GaiaProjectAppService.models.entities.Donation" table="Donation" schema="GaiaDatabase">
+        <id name="idDonation">
+            <column name="idDonation" sql-type="int(11)"/>
+        </id>
+        <property name="idAssociation">
+            <column name="idAssociation" sql-type="int(11)"/>
+        </property>
+        <property name="donationCode">
+            <column name="donationCode" sql-type="varchar(12)" length="12"/>
+        </property>
+        <property name="concept">
+            <column name="concept" sql-type="varchar(70)" length="70"/>
+        </property>
+        <property name="dateDonation">
+            <column name="dateDonation" sql-type="date"/>
+        </property>
+        <many-to-one name="associationByIdAssociation" class="GaiaProjectAppService.models.entities.Association" insert="false" update="false">
+            <column name="idAssociation"/>
+        </many-to-one>
+        <set name="inventoryDonationsByIdDonation" inverse="true">
+            <key>
+                <column name="idDonation"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.InventoryDonation"/>
+        </set>
+        <set name="monetaryDonationsByIdDonation" inverse="true">
+            <key>
+                <column name="idDonation"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.MonetaryDonation"/>
+        </set>
+        <set name="programDonationsByIdDonation" inverse="true">
+            <key>
+                <column name="idDonation"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.ProgramDonation"/>
+        </set>
+    </class>
+</hibernate-mapping>

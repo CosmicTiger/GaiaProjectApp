@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="GaiaProjectAppService.models.entities.Supply" table="Supply" schema="GaiaDatabase">
+        <id name="idSupply">
+            <column name="idSupply" sql-type="int(11)"/>
+        </id>
+        <property name="idWarehouse">
+            <column name="idWarehouse" sql-type="int(11)"/>
+        </property>
+        <property name="warehouseCode">
+            <column name="warehouseCode" sql-type="varchar(12)" length="12" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="typeSupply">
+            <column name="typeSupply" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="admissionDate">
+            <column name="admissionDate" sql-type="date"/>
+        </property>
+        <property name="expirationDate">
+            <column name="expirationDate" sql-type="date" not-null="true"/>
+        </property>
+        <property name="departureDate">
+            <column name="departureDate" sql-type="date" not-null="true"/>
+        </property>
+        <property name="cost">
+            <column name="cost" sql-type="double" precision="-1"/>
+        </property>
+        <many-to-one name="warehouseByIdWarehouse" class="GaiaProjectAppService.models.entities.Warehouse" insert="false" update="false">
+            <column name="idWarehouse"/>
+        </many-to-one>
+        <set name="botanicPlantaesByIdSupply" inverse="true">
+            <key>
+                <column name="idSupply"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.BotanicPlantae"/>
+        </set>
+        <set name="inventoryDonationsByIdSupply" inverse="true">
+            <key>
+                <column name="idSupply"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.InventoryDonation"/>
+        </set>
+        <set name="veterinaryAnimaliasByIdSupply" inverse="true">
+            <key>
+                <column name="idSupply"/>
+            </key>
+            <one-to-many not-found="ignore" class="GaiaProjectAppService.models.entities.VeterinaryAnimalia"/>
+        </set>
+    </class>
+</hibernate-mapping>

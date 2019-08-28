@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/GaiaDatabase</property>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">cancer160799</property>
+    <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="show_sql">true</property>
+    <mapping class="GaiaProjectAppService.models.entities.Staff" resource="config/Staff.hbm.xml"/>
+    <mapping resource="config/Animalia.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.Animalia"/>
+    <mapping resource="config/AnimaliaZone.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.AnimaliaZone"/>
+    <mapping resource="config/Association.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.Association"/>
+    <mapping resource="config/Botanic.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.Botanic"/>
+    <mapping resource="config/BotanicPlantae.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.BotanicPlantae"/>
+    <mapping resource="config/Caretaker.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.Caretaker"/>
+    <mapping resource="config/CaretakerAnimalia.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.Animalia"/>
+    <mapping resource="config/CaretakerPlantae.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.CaretakerPlantae"/>
+    <mapping resource="config/Donation.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.Donation"/>
+    <mapping resource="config/Guide.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.Guide"/>
+    <mapping resource="config/InventoryDonation.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.InventoryDonation"/>
+    <mapping resource="config/Itinerary.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.Itinerary"/>
+    <mapping resource="config/ItineraryGuide.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.ItineraryGuide"/>
+    <mapping resource="config/ItineraryZone.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.ItineraryZone"/>
+    <mapping resource="config/Management.hbm.xml"/>
+    <mapping resource="config/Merchandising.hbm.xml"/>
+    <mapping resource="config/MonetaryDonation.hbm.xml"/>
+    <mapping resource="config/PaymentDetail.hbm.xml"/>
+    <mapping resource="config/Plantae.hbm.xml"/>
+    <mapping resource="config/PlantaeZone.hbm.xml"/>
+    <mapping resource="config/Program.hbm.xml"/>
+    <mapping resource="config/ProgramDonation.hbm.xml"/>
+    <mapping resource="config/Sale.hbm.xml"/>
+    <mapping resource="config/SaleDetail.hbm.xml"/>
+    <mapping resource="config/Security.hbm.xml"/>
+    <mapping resource="config/Shift.hbm.xml"/>
+    <mapping resource="config/Specie.hbm.xml"/>
+    <mapping resource="config/Staff.hbm.xml"/>
+    <mapping resource="config/Supply.hbm.xml"/>
+    <mapping resource="config/Transferences.hbm.xml"/>
+    <mapping resource="config/TransferencesAnimalia.hbm.xml"/>
+    <mapping resource="config/TransferencesPlantae.hbm.xml"/>
+    <mapping resource="config/User.hbm.xml"/>
+    <mapping class="GaiaProjectAppService.models.entities.User"/>
+    <mapping resource="config/Veterinary.hbm.xml"/>
+    <mapping resource="config/VeterinaryAnimalia.hbm.xml"/>
+    <mapping resource="config/Viatic.hbm.xml"/>
+    <mapping resource="config/Warehouse.hbm.xml"/>
+    <mapping resource="config/Zone.hbm.xml"/>
+    <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
