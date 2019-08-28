@@ -2,20 +2,15 @@ package GaiaProjectAppService.controllers;
 
 import GaiaProjectAppService.models.dao.entity.UserDAO;
 import GaiaProjectAppService.models.dao.entity.UserDAOImp;
-import GaiaProjectAppService.models.entities.User;
 import GaiaProjectAppService.utils.Message;
 import GaiaProjectAppService.utils.RenderingViews;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -69,7 +64,7 @@ public class LoginController implements Initializable {
                     } else {
                         message.messageDialogError("Error en Credenciales");
                     }
-
+/*
                     User userInsert = new User();
                     userInsert.setIdUser(2);
                     userInsert.setIdStaff(2);
@@ -78,7 +73,7 @@ public class LoginController implements Initializable {
                     userInsert.setProfilePhoto("");
                     userInsert.setSecurityQuestion("QUe onda?");
                     userInsert.setSecurityAnswer("que norri");
-                    userDao.saveOrUpdate(userInsert);
+                    userDao.saveOrUpdate(userInsert);*/
 
                     List<User> users = userDao.findAll();
                     users.forEach(user1 -> System.out.println(user1.getUsername()));
