@@ -1,4 +1,4 @@
-package GaiaProjectAppService.Animations;
+package GaiaProjectAppService.animations;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;

@@ -2,7 +2,7 @@
     Animation For JavaFX.
 */
 
-package GaiaProjectAppService.Animations;
+package GaiaProjectAppService.animations;
 
 import javafx.animation.Interpolator;
 import javafx.animation.Timeline;

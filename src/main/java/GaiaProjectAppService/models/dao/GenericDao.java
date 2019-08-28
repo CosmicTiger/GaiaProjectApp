@@ -1,6 +1,6 @@
 package GaiaProjectAppService.models.dao;
 
-import GaiaProjectAppService.Exceptions.BussinessException;
+import GaiaProjectAppService.exceptions.BussinessException;
 
 import java.io.Serializable;
 import java.util.List;

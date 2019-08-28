@@ -1,4 +1,4 @@
-package GaiaProjectAppService.Exceptions;
+package GaiaProjectAppService.exceptions;
 
 import org.hibernate.exception.ConstraintViolationException;
 
