@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="572.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.User">
+   <children>
+      <Pane prefHeight="574.0" prefWidth="468.0" style="-fx-background-color: #d3e3b6;">
+         <children>
+            <Label layoutX="86.0" layoutY="248.0" text="User:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <PasswordField layoutX="174.0" layoutY="413.0" prefHeight="25.0" prefWidth="177.0" />
+            <Label layoutX="67.0" layoutY="412.0" text="Password:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="151.0" layoutY="274.0" prefHeight="4.0" prefWidth="216.0" style="-fx-background-color: #020202;" />
+            <JFXTextField layoutX="162.0" layoutY="249.0" prefHeight="25.0" prefWidth="194.0" unFocusColor="#fffefe" />
+            <FontAwesomeIconView fill="#86a857" glyphName="USERS" layoutX="151.0" layoutY="176.0" size="150" wrappingWidth="200.0000024586916" />
+            <Label layoutX="77.0" layoutY="315.0" text="E- mail:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="155.0" layoutY="341.0" prefHeight="4.0" prefWidth="216.0" style="-fx-background-color: #020202;" />
+            <JFXTextField layoutX="166.0" layoutY="316.0" prefHeight="25.0" prefWidth="194.0" unFocusColor="#fffefe" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
