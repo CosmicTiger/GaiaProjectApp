@@ -2,6 +2,7 @@ package GaiaProjectAppService.controllers;
 
 import GaiaProjectAppService.models.dao.entity.UserDAO;
 import GaiaProjectAppService.models.dao.entity.UserDAOImp;
+import GaiaProjectAppService.models.entities.User;
 import GaiaProjectAppService.utils.Message;
 import GaiaProjectAppService.utils.RenderingViews;
 import javafx.fxml.FXML;

@@ -8,6 +8,8 @@
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="show_sql">true</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">cancer160799</property>
     <mapping class="GaiaProjectAppService.models.entities.Animalia"/>
     <mapping class="GaiaProjectAppService.models.entities.AnimaliaZone"/>
     <mapping class="GaiaProjectAppService.models.entities.Association"/>
@@ -27,7 +29,6 @@
     <mapping class="GaiaProjectAppService.models.entities.MonetaryDonation"/>
     <mapping class="GaiaProjectAppService.models.entities.PaymentDetail"/>
     <mapping class="GaiaProjectAppService.models.entities.Plantae"/>
-    <mapping class="GaiaProjectAppService.models.entities.PlantaeZone"/>
     <mapping class="GaiaProjectAppService.models.entities.Program"/>
     <mapping class="GaiaProjectAppService.models.entities.ProgramDonation"/>
     <mapping class="GaiaProjectAppService.models.entities.Sale"/>
@@ -46,9 +47,7 @@
     <mapping class="GaiaProjectAppService.models.entities.Viatic"/>
     <mapping class="GaiaProjectAppService.models.entities.Warehouse"/>
     <mapping class="GaiaProjectAppService.models.entities.Zone"/>
-
-    <!-- <property name="connection.username"/> -->
-    <!-- <property name="connection.password"/> -->
+    <mapping class="GaiaProjectAppService.models.entities.PlantaeZone"/>
 
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->

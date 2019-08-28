@@ -2,6 +2,7 @@ package GaiaProjectAppService.models.dao.entity;
 
 import GaiaProjectAppService.Exceptions.BussinessException;
 import GaiaProjectAppService.models.dao.GenericDAOHibernateImp;
+import GaiaProjectAppService.models.entities.User;
 import org.hibernate.Session;
 import org.hibernate.exception.ConstraintViolationException;
 import org.hibernate.query.Query;
