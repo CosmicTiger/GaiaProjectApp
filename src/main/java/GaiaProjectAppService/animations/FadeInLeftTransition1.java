@@ -1,4 +1,4 @@
-package GaiaProjectAppService.Animations;
+package GaiaProjectAppService.animations;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -25,13 +25,13 @@ import javafx.util.Duration;
  * @author Jasper Potts
  */
 @SuppressWarnings("deprecation")
-public class FadeInLeftTransition extends configAnimasi {
+public class FadeInLeftTransition1 extends configAnimasi {
     /**
      * Create new FadeInLeftTransition
      * 
      * @param node The node to affect
      */
-    public FadeInLeftTransition(final Node node) {
+    public FadeInLeftTransition1(final Node node) {
         super(
             node,
             TimelineBuilder.create()

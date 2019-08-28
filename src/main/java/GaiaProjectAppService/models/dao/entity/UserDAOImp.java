@@ -1,6 +1,6 @@
 package GaiaProjectAppService.models.dao.entity;
 
-import GaiaProjectAppService.Exceptions.BussinessException;
+import GaiaProjectAppService.exceptions.BussinessException;
 import GaiaProjectAppService.models.dao.GenericDAOHibernateImp;
 import GaiaProjectAppService.models.entities.User;
 import org.hibernate.Session;

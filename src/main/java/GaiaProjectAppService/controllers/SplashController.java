@@ -2,7 +2,7 @@ package GaiaProjectAppService.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import GaiaProjectAppService.Animations.*;
+import GaiaProjectAppService.animations.*;
 import GaiaProjectAppService.utils.HibernateUtil;
 import GaiaProjectAppService.utils.RenderingViews;
 import javafx.animation.AnimationTimer;
@@ -16,8 +16,6 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
 public class SplashController implements Initializable {
     

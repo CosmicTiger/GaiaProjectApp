@@ -1,7 +1,7 @@
 package GaiaProjectAppService.models.dao;
 
-import GaiaProjectAppService.Exceptions.BussinessException;
-import GaiaProjectAppService.Exceptions.BussinessMessage;
+import GaiaProjectAppService.exceptions.BussinessException;
+import GaiaProjectAppService.exceptions.BussinessMessage;
 import GaiaProjectAppService.utils.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
