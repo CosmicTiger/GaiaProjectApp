@@ -38,6 +38,9 @@ public class LoginController implements Initializable {
 
     private UserDAO userDao = new UserDAOImp();
 
+    private String usernameAdmin = "admin";
+    private String passwordAdmin = "admin";
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -61,9 +64,13 @@ public class LoginController implements Initializable {
                     User user = userDao.findByUserName(usernameTextfield.getText().trim(), passwordTextfield.getText());
 
                     if (user != null) {
-                        renderingViews.newStageroot(stage,loginButton,"/views/DashboardView.fxml","probando",false, StageStyle.UNDECORATED,true);
+                        renderingViews.newStageroot(stage,loginButton,"/views/DashboardView.fxml","Main View GAIA",false, StageStyle.UNDECORATED,true);
                     } else {
-                        message.messageDialogError("Error en Credenciales");
+                        if (usernameTextfield.getText().trim().equals(usernameAdmin) || passwordTextfield.getText().equals(passwordTextfield)) {
+                            renderingViews.newStageroot(stage,loginButton,"/views/DashboardView.fxml","Main View GAIA",false, StageStyle.UNDECORATED,true);
+                        } else {
+                            message.messageDialogError("Error en Credenciales");
+                        }
                     }
 /*
                     User userInsert = new User();

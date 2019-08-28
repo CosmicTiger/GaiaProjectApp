@@ -12,8 +12,6 @@
 
 USE GaiaDatabase;
 
-SELECT * from Plantae_Zone
-
 /* Adding data to HUMAN TALENT */
 # TABLE STAFF
 SELECT * FROM Staff;
