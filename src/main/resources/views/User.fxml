@@ -1,40 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="572.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.User">
    <children>
-      <Pane prefHeight="574.0" prefWidth="468.0" style="-fx-background-color: #d3e3b6;">
+      <Pane prefHeight="574.0" prefWidth="468.0" style="-fx-background-color: #d3e3b6; -fx-border-radius: 50;">
          <children>
-            <Label layoutX="86.0" layoutY="248.0" text="User:">
+            <Label layoutX="94.0" layoutY="276.0" text="User:" textFill="#264301">
+               <font>
+                  <Font name="Roboto" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="74.0" layoutY="394.0" text="Password:" textFill="#264301">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <PasswordField layoutX="174.0" layoutY="413.0" prefHeight="25.0" prefWidth="177.0" />
-            <Label layoutX="67.0" layoutY="412.0" text="Password:">
+            <JFXTextField focusColor="#d6f58e" layoutX="150.0" layoutY="275.0" prefHeight="25.0" prefWidth="220.0" unFocusColor="#264301" />
+            <FontAwesomeIconView fill="#86a857" glyphName="USERS" layoutX="156.0" layoutY="175.0" size="150" wrappingWidth="200.0000024586916" />
+            <Label layoutX="83.0" layoutY="328.0" prefHeight="27.0" prefWidth="63.0" text="E- mail:" textFill="#264301">
+               <font>
+                  <Font name="Roboto" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField focusColor="#d6f58e" layoutX="150.0" layoutY="341.0" prefHeight="25.0" prefWidth="220.0" unFocusColor="#264301" />
+            <Label layoutX="78.0" layoutY="450.0" text="Confirm: " textFill="#264301">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Separator layoutX="151.0" layoutY="274.0" prefHeight="4.0" prefWidth="216.0" style="-fx-background-color: #020202;" />
-            <JFXTextField layoutX="162.0" layoutY="249.0" prefHeight="25.0" prefWidth="194.0" unFocusColor="#fffefe" />
-            <FontAwesomeIconView fill="#86a857" glyphName="USERS" layoutX="151.0" layoutY="176.0" size="150" wrappingWidth="200.0000024586916" />
-            <Label layoutX="77.0" layoutY="315.0" text="E- mail:">
+            <JFXTextField focusColor="#d6f58e" layoutX="150.0" layoutY="463.0" prefHeight="25.0" prefWidth="220.0" unFocusColor="#264301" />
+            <Label layoutX="94.0" layoutY="213.0" text="Role:" textFill="#264301">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Roboto" size="18.0" />
                </font>
             </Label>
-            <Separator layoutX="155.0" layoutY="341.0" prefHeight="4.0" prefWidth="216.0" style="-fx-background-color: #020202;" />
-            <JFXTextField layoutX="166.0" layoutY="316.0" prefHeight="25.0" prefWidth="194.0" unFocusColor="#fffefe" />
+            <JFXTextField focusColor="#d6f58e" layoutX="150.0" layoutY="223.0" prefHeight="25.0" prefWidth="220.0" unFocusColor="#264201" />
+            <JFXPasswordField focusColor="#d6f58e" layoutX="150.0" layoutY="407.0" prefHeight="25.0" prefWidth="220.0" unFocusColor="#264301" />
          </children>
       </Pane>
    </children>
