@@ -1,49 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="572.0" prefWidth="462.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.User">
+<AnchorPane prefHeight="400.0" prefWidth="745.0" style="-fx-background-color: #8ab446;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.User">
    <children>
-      <Pane prefHeight="574.0" prefWidth="468.0" style="-fx-background-color: #d3e3b6; -fx-border-radius: 50;">
+      <AnchorPane layoutX="307.0" layoutY="35.0" prefHeight="330.0" prefWidth="402.0" style="-fx-background-color: #d6f58e;">
          <children>
-            <Label layoutX="94.0" layoutY="276.0" text="User:" textFill="#264301">
+            <JFXTextField focusColor="#2d6b22" layoutX="72.0" layoutY="69.0" prefHeight="25.0" prefWidth="259.0" promptText="User" unFocusColor="#5c8a03" />
+            <JFXTextField focusColor="#2d6b22" layoutX="72.0" layoutY="123.0" prefHeight="25.0" prefWidth="259.0" promptText="E -mail" unFocusColor="#5c8a03" />
+            <JFXPasswordField focusColor="#2d6b22" layoutX="72.0" layoutY="175.0" prefHeight="25.0" prefWidth="259.0" promptText="Password" unFocusColor="#5c8a03" />
+            <JFXPasswordField focusColor="#2d6b22" layoutX="72.0" layoutY="225.0" prefHeight="25.0" prefWidth="259.0" promptText="Confirm Password" unFocusColor="#5c8a03" />
+            <JFXButton layoutX="72.0" layoutY="286.0" prefHeight="25.0" prefWidth="259.0" style="-fx-background-color: #d3e29d;" text="Sign Up" textFill="#2d6b22">
                <font>
-                  <Font name="Roboto" size="18.0" />
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="172.0" layoutY="31.0" text="Sign In" textFill="#2d6b22">
+               <font>
+                  <Font size="19.0" />
                </font>
             </Label>
-            <Label layoutX="74.0" layoutY="394.0" text="Password:" textFill="#264301">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <JFXTextField focusColor="#d6f58e" layoutX="150.0" layoutY="275.0" prefHeight="25.0" prefWidth="220.0" unFocusColor="#264301" />
-            <FontAwesomeIconView fill="#86a857" glyphName="USERS" layoutX="156.0" layoutY="175.0" size="150" wrappingWidth="200.0000024586916" />
-            <Label layoutX="83.0" layoutY="328.0" prefHeight="27.0" prefWidth="63.0" text="E- mail:" textFill="#264301">
-               <font>
-                  <Font name="Roboto" size="18.0" />
-               </font>
-            </Label>
-            <JFXTextField focusColor="#d6f58e" layoutX="150.0" layoutY="341.0" prefHeight="25.0" prefWidth="220.0" unFocusColor="#264301" />
-            <Label layoutX="78.0" layoutY="450.0" text="Confirm: " textFill="#264301">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <JFXTextField focusColor="#d6f58e" layoutX="150.0" layoutY="463.0" prefHeight="25.0" prefWidth="220.0" unFocusColor="#264301" />
-            <Label layoutX="94.0" layoutY="213.0" text="Role:" textFill="#264301">
-               <font>
-                  <Font name="Roboto" size="18.0" />
-               </font>
-            </Label>
-            <JFXTextField focusColor="#d6f58e" layoutX="150.0" layoutY="223.0" prefHeight="25.0" prefWidth="220.0" unFocusColor="#264201" />
-            <JFXPasswordField focusColor="#d6f58e" layoutX="150.0" layoutY="407.0" prefHeight="25.0" prefWidth="220.0" unFocusColor="#264301" />
          </children>
-      </Pane>
+      </AnchorPane>
+      <ImageView fitHeight="230.0" fitWidth="325.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/Proyecto%20BD%20II/iconos/image1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="61.0" layoutY="27.0" text="WELCOME TO GAIA" textFill="#d6f58e">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
