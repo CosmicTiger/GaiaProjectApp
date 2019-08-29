@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -20,14 +21,13 @@ import java.io.IOException;
 
 /**
  *
- * @author Oliverhacker
+ * @author joker
  */
 public class RenderingViews {
 
-    public static ObservableList<String> cargos = FXCollections.observableArrayList();
+    public static ObservableList<String> roles = FXCollections.observableArrayList();
     public static int id;
     public static String fechahoy;
-    public static int MedicoId;
 
     public RenderingViews() {
 
@@ -79,8 +79,8 @@ public class RenderingViews {
         try {
             id=i;
             System.out.println(id);
-            cargos=c;
-            System.out.println(cargos);
+            roles =c;
+            System.out.println(roles);
             Stage st = new Stage();
             stage = (Stage) lb.getScene().getWindow();
             System.out.println("Abriendo nuevo scene");
@@ -118,10 +118,10 @@ public class RenderingViews {
         }
     }
 
-    public void renderingUI(String ui, BorderPane adaptivePane){
+    public void renderingNode(Node node, BorderPane adaptivePane){
         Parent root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource(ui));
+            root = FXMLLoader.load(getClass().getResource(""));
         } catch (IOException e) {
             e.printStackTrace();
         }
