@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="501.0" prefWidth="1063.0" style="-fx-background-color: #efeeb6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.Management">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="501.0" prefWidth="304.0" style="-fx-background-color: #c1c54e;">
+         <children>
+            <JFXButton layoutX="1.0" layoutY="80.0" prefHeight="52.0" prefWidth="294.0" text="Sales" underline="true">
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#8ea253" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton layoutY="132.0" prefHeight="52.0" prefWidth="294.0" text="Zone" underline="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.6111111111111112" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#8ea253" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton layoutX="3.0" layoutY="184.0" prefHeight="52.0" prefWidth="291.0" text="Programs" underline="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.6111111111111112" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#8ea253" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton layoutX="4.0" layoutY="236.0" prefHeight="52.0" prefWidth="291.0" text="Associate" underline="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.6111111111111112" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#8ea253" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton layoutX="3.0" layoutY="290.0" prefHeight="52.0" prefWidth="294.0" text="Warehouse" underline="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.6111111111111112" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#8ea253" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton layoutY="342.0" prefHeight="52.0" prefWidth="297.0" text="Merchandising" underline="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.6111111111111112" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#8ea253" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton layoutX="4.0" layoutY="394.0" prefHeight="52.0" prefWidth="297.0" text="Staff" underline="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.6111111111111112" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#8ea253" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <Label layoutX="75.0" layoutY="33.0" text="HUMAN TALENT" textFill="#596b22">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="3.0" layoutY="446.0" prefHeight="52.0" prefWidth="294.0" text="EXIT" underline="true">
+               <ripplerFill>
+                  <RadialGradient centerX="0.6111111111111112" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="#8ea253" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+         </children></AnchorPane>
+      <ImageView fitHeight="412.0" fitWidth="771.0" layoutX="303.0" layoutY="42.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/reserve.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
