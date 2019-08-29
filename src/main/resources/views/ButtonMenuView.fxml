@@ -1,14 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="GaiaProjectAppService.controllers."
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GaiaProjectAppService.controllers.ButtonMenuView">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="290.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="193.0">
+                    <children>
+                        <JFXButton fx:id="bttnAdmin" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="232.0" text="Administracion">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="193.0">
+                    <children>
+                        <JFXButton fx:id="bttnVet" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="232.0" text="Veterinario">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="193.0">
+                    <children>
+                        <JFXButton fx:id="bttnBotanical" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="232.0" text="Botanico">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="193.0">
+                    <children>
+                        <JFXButton fx:id="bttnCaretaker" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="232.0" text="Cuidador">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="193.0">
+                    <children>
+                        <JFXButton fx:id="bttnSecurity" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="232.0" text="Seguridad">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="69.0" prefWidth="193.0">
+                    <children>
+                        <JFXButton fx:id="bttnHide" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="232.0" text="Ocultar">
+                            <HBox.margin>
+                                <Insets left="30.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>

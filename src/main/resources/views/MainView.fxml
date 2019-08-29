@@ -28,7 +28,7 @@
                   </Pane>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <JFXButton onAction="#handleButtonAction" prefHeight="50.0" prefWidth="160.0" text="HOME" textFill="WHITE">
+                        <JFXButton fx:id="homeButton" onAction="#handleButtonAction" prefHeight="50.0" prefWidth="160.0" text="HOME" textFill="WHITE">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -66,7 +66,7 @@
             </VBox>
             <VBox prefHeight="768.0" prefWidth="1081.0">
                <children>
-                  <AnchorPane prefHeight="197.0" prefWidth="1056.0" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS" />
+                  <AnchorPane fx:id="nestedAdaptativeTopPane" prefHeight="197.0" prefWidth="1056.0" style="-fx-background-color: WHITE;" VBox.vgrow="ALWAYS" />
                   <AnchorPane fx:id="nestedAdaptativeCenterPane" prefHeight="594.0" prefWidth="1056.0" VBox.vgrow="ALWAYS" />
                   <AnchorPane prefHeight="20.0" prefWidth="1056.0" style="-fx-background-color: azure;">
                      <children>

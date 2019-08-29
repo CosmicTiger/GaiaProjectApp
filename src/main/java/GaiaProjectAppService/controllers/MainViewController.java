@@ -24,9 +24,14 @@ public class MainViewController implements Initializable {
 
     @FXML
     public AnchorPane nestedAdaptativeCenterPane;
+    @FXML
     public JFXButton logoutButton;
     @FXML
+    public AnchorPane nestedAdaptativeTopPane;
+    @FXML
     private JFXButton roleButton;
+    @FXML
+    private JFXButton homeButton;
 
     @FXML
     Stage stage;
@@ -35,8 +40,11 @@ public class MainViewController implements Initializable {
     public void handleButtonAction(ActionEvent actionEvent) throws IOException {
        JFXButton jfxButtonVerifier =  (JFXButton) actionEvent.getSource();
 
+       if(homeButton.equals(jfxButtonVerifier)) {
+       }
+
         if(roleButton.equals(jfxButtonVerifier)){
-            AnchorPane nestedViewParent = FXMLLoader.load(getClass().getResource("/views/ProfileView.fxml"));
+            AnchorPane nestedViewParent = FXMLLoader.load(getClass().getResource("/views/ButtonMenuView.fxml"));
 
             nestedAdaptativeCenterPane.getChildren().setAll(nestedViewParent);
         }
