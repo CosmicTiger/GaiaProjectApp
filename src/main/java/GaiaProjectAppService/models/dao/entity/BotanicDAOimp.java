@@ -1,7 +1,9 @@
 package GaiaProjectAppService.models.dao.entity;
 
+
 import GaiaProjectAppService.exceptions.BussinessException;
 import GaiaProjectAppService.models.dao.GenericDAOHibernateImp;
+import GaiaProjectAppService.models.entities.Botanic;
 import GaiaProjectAppService.models.entities.User;
 import org.hibernate.Session;
 import org.hibernate.exception.ConstraintViolationException;
@@ -11,19 +13,18 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class UserDAOImp extends GenericDAOHibernateImp<User, Integer> implements UserDAO {
+public class BotanicDAOimp extends GenericDAOHibernateImp<Botanic, Integer> implements BotanicDAO {
 
-    private final static Logger LOGGER = Logger.getLogger(UserDAOImp.class.getName());
+    private final static Logger LOGGER = Logger.getLogger(BotanicDAOimp.class.getName());
 
     @Override
-    public User findByUserName(String userName, String password) throws BussinessException {
-
+    public Botanic findByBotanicDAO(String BotaniCode) throws BussinessException {
         Session session = sessionFactory.getCurrentSession();
 
         try {
 
-            Query query = session.createQuery("SELECT u FROM User u WHERE u.username = :userName and u.password = :password")
-                    .setParameter("userName", userName).setParameter("password", password);
+            Query query = session.createQuery("SELECT s.staff_code, s.first_name, s.lastName_primary, b.role FROM Staff s INNER JOIN Botanic b ON s.staffId = b.staffId WHERE s.staffCode = :staffCode")
+                    .setParameter("BotaniCode", BotaniCode);
             List<User> entities = query.list();
 
             return !entities.isEmpty() ? entities.get(0) : null;
@@ -58,10 +59,5 @@ public class UserDAOImp extends GenericDAOHibernateImp<User, Integer> implements
 
 
 
-
-
-
-
     }
-
 }
