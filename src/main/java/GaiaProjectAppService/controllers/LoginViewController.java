@@ -19,7 +19,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class LoginController implements Initializable {
+public class LoginViewController implements Initializable {
 
     @FXML
     private TextField usernameTextfield;
@@ -64,10 +64,10 @@ public class LoginController implements Initializable {
                     User user = userDao.findByUserName(usernameTextfield.getText().trim(), passwordTextfield.getText());
 
                     if (user != null) {
-                        renderingViews.newStageroot(stage,loginButton,"/views/DashboardView.fxml","Main View GAIA",false, StageStyle.UNDECORATED,true);
+                        renderingViews.newStageroot(stage,loginButton, "/views/MainView.fxml","Main View GAIA",false, StageStyle.UNDECORATED,true);
                     } else {
                         if (usernameTextfield.getText().trim().equals(usernameAdmin) || passwordTextfield.getText().equals(passwordTextfield)) {
-                            renderingViews.newStageroot(stage,loginButton,"/views/DashboardView.fxml","Main View GAIA",false, StageStyle.UNDECORATED,true);
+                            renderingViews.newStageroot(stage,loginButton, "/views/MainView.fxml","Main View GAIA",false, StageStyle.UNDECORATED,true);
                         } else {
                             message.messageDialogError("Error en Credenciales");
                         }
